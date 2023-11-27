@@ -93,7 +93,7 @@ export class RenderService {
         </div>
         <div class="github-link">
           <div class="link">
-            <a href="https://github.com/jubeatt" target="_blank">
+            <a href="https://github.com/jubeatt/japanese-quiz" target="_blank">
               ${RenderService.GitHubIcon()}
             </a>
           </div>

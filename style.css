@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+  --bg-blue: #dff2ff;
+  --bg-yellow: #fffcf2;
+  --light-blue: #aac9df;
+  --gray: #555;
+  --light-gray: #a0a0a0;
+  --green: #74c7bb;
+  --dark-green: #0d9b86;
+  --blue: #7397c8;
+  --purple: #af31b9;
+  --red: #f7a1a1;
+  --dark-red: #c94545;
+}
+
+/* base */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+  background-color: var(--bg-blue);
+  color: var(--gray);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+#root {
+  width: 90%;
+  min-height: 100vh;
+  margin: auto;
+  background-color: var(--bg-yellow);
+  border-radius: 10px;
+}
+/* styles */
+.welcome {
+  padding: 40px;
+}
+
+.welcome .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome .text {
+  font-size: 1.7rem;
+  margin: 0 10px;
+}
+
+.welcome .intro {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.welcome .mode .btn {
+  display: block;
+  margin: auto;
+}
+
+.welcome .mode .btn:not(:first-child) {
+  margin-top: 40px;
+}
+
+.welcome .link {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0;
+}
+
+.welcome .message {
+  color: var(--light-gray);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.count-down {
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.count-down .number {
+  font-size: 5rem;
+}
+
+.question {
+  position: relative;
+  padding: 20px;
+}
+
+.question .tip {
+  text-align: center;
+  color: var(--light-gray);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.question .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.question .title h1 {
+  font-size: 1.5rem;
+}
+
+.question .title .icon-heart {
+  margin-right: 10px;
+}
+
+.question .action {
+  margin: 60px 0;
+}
+
+.question .btn {
+  display: block;
+  font-size: 1.4rem;
+  padding: 8px;
+  margin: auto;
+}
+
+.question .btn + .btn {
+  margin-top: 20px;
+}
+
+.result {
+  padding: 20px;
+}
+
+.result .title {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.result section + section {
+  margin-top: 80px;
+}
+
+.result .count-section ul {
+  padding: 0;
+}
+
+.result .count-section ul li {
+  list-style-type: none;
+  padding: 4px 8px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+  margin: 10px;
+}
+
+.result .conclusion-section ul li:not(:first-child) {
+  margin-top: 10px;
+}
+
+.result .button-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.result .button-section .btn {
+  font-size: 1.4rem;
+}
+
+/* utils */
+.color-red {
+  color: var(--dark-red);
+}
+
+.color-green {
+  color: var(--dark-green);
+}
+
+/* component */
+.btn {
+  min-width: 300px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  font-size: 2rem;
+  padding: 16px;
+  outline: none;
+  cursor: pointer;
+  transition: opacity 0.1s;
+}
+
+.btn.blue {
+  background-color: var(--blue);
+}
+
+.btn.purple {
+  background-color: var(--purple);
+}
+
+.btn.red {
+  background-color: var(--red);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  position: relative;
+  margin: auto;
+  max-width: 500px;
+  min-height: 300px;
+}
+
+.card-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -2px #0000001a;
+}
+
+.card-content p {
+  font-size: 6rem;
+}
+
+.card-content.front {
+  transform: rotateY(90deg);
+  transition: ease-in 0.2s;
+}
+.card-content.back {
+  transform: rotateY(0deg);
+  transition: ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.card.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+.card.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.icon-heart {
+  width: 28px;
+  height: 28px;
+}
+
+.icon-heart path {
+  fill: var(--light-blue);
+}
+
+.icon-github {
+  width: 80px;
+  height: 80px;
+}
+
+.icon-github path {
+  fill: var(--gray);
+  transition: opacity 0.1s;
+}
+
+.icon-github:hover path {
+  opacity: 0.9;
+}
+
+/* for desktop */
+@media screen and (min-width: 768px) {
+  .result .count-section ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .result {
+    text-align: center;
+  }
+
+  .result section ul {
+    justify-content: center;
+  }
+
+  .result .list-wrap {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+}

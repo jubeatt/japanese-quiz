@@ -12,6 +12,8 @@ The reason for developing a web page is its accessibility – you can instantly 
 
 ![scrrenshot](images/sceenshot.png)
 
+![in-game](images/in-game.png)
+
 The quiz itself has a straightforward design, focusing on memorizing corresponding Rome or Hiragana/Katakana based on flashcards. However, it boasts the following features:
 
 - Cross-platform support (available on both mobile and desktop)

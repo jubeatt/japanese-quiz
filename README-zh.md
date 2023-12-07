@@ -10,6 +10,8 @@ Japanese Quiz 是一個幫助你學習日文的工具，用來提升你對 50 �
 
 ![scrrenshot](images/sceenshot.png)
 
+![in-game](images/in-game.png)
+
 測驗本身的設計很單純，就是根據卡牌來背誦對應的羅馬拼音或假名而已，不過它具有以下幾個特色：
 
 - 支援跨平台使用（手機、電腦）
